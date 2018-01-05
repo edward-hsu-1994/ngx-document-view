@@ -1,1 +1,6 @@
-<iframe *ngIf="provider === 'google'" src="http://docs.google.com/gview?url={{encoding(src)}}&embedded=true"></iframe>
+<div class="full">
+  <iframe *ngIf="provider === 'google'" [src]="'http://docs.google.com/gview?url=' + encodeURI(src) + '&embedded=true' | safe : 'resourceUrl'"
+    width="100%" height="100%" [frameBorder]="frameBorder"></iframe>
+  <iframe *ngIf="provider === 'microsoft'" [src]="'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURI(src) | safe : 'resourceUrl'"
+    width="100%" height="100%" [frameBorder]="frameBorder"></iframe>
+</div>

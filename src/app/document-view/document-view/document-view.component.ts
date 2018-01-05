@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ViewProviders } from '../models/ViewProviders';
 
 @Component({
-  selector: 'app-document-view',
+  selector: 'ngx-document-view',
   templateUrl: './document-view.component.html',
   styleUrls: ['./document-view.component.css']
 })
@@ -17,7 +17,16 @@ export class DocumentViewComponent implements OnInit {
    */
   @Input() public src: string;
 
+  /**
+   * 是否有外框
+   */
+  @Input() public frameBorder = 0;
+
   constructor() {}
 
   ngOnInit() {}
+
+  encodeURI(url: string): string {
+    return encodeURIComponent(url);
+  }
 }
