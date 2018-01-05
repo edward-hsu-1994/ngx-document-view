@@ -1,6 +1,7 @@
 {
-  "name": "document-view",
-  "version": "0.0.0",
+  "name": "ngx-document-view",
+  "version": "1.0.0",
+  "description": "Document Viewer",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
