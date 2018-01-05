@@ -1,27 +1,36 @@
-# DocumentView
+# ngx-document-view
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+Simple document viewer.
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+npm install ngx-document-view
+```
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+app.module.ts
 
-## Build
+```typescript
+// import module
+import { DocumentViewModule } from 'ngx-document-view';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+@NgModule({
+  declarations: [AppComponent],
+  imports: [DocumentViewModule], // import
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
 
-## Running unit tests
+app.component.html
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```html
+<ngx-document-view style="height: 45vh; display: block;" src="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf"></ngx-document-view>
+```
 
-## Running end-to-end tests
+### Result
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Imgur](https://i.imgur.com/nntX61Y.gif)
