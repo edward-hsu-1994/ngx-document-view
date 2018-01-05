@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ViewProviders } from '../models/ViewProviders';
-
+import { UriBuilder } from 'uribuilder';
+import { cleanPath } from 'cleanPath';
 @Component({
   selector: 'ngx-document-view',
   templateUrl: './document-view.component.html',
@@ -26,7 +27,14 @@ export class DocumentViewComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * 轉換連結與編碼
+   * @param url 連結
+   */
   encodeURI(url: string): string {
+    if (UriBuilder.parse(url).isRelative()) {
+      url = cleanPath(document.baseURI + '/' + url);
+    }
     return encodeURIComponent(url);
   }
 }
