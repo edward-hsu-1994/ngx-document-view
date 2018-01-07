@@ -28,7 +28,10 @@ export class AppModule {}
 app.component.html
 
 ```html
-<ngx-document-view style="height: 45vh; display: block;" src="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf"></ngx-document-view>
+<iframe style="height: 45vh; width:100%; display: block;"
+  ngx-document src="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf"
+  provider="google"></iframe>
+  <!-- provider is Options (google [default] or microsoft)-->
 ```
 
 ### Result

@@ -84,7 +84,7 @@
       "check-separator",
       "check-type"
     ],
-    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "directive-selector": [true, "attribute", ["app", "ngx"], "camelCase"],
     "component-selector": [true, "element", ["app", "ngx"], "kebab-case"],
     "no-output-on-prefix": true,
     "use-input-property-decorator": true,

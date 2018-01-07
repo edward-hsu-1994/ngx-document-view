@@ -5,9 +5,9 @@ export enum ViewProviders {
   /**
    * Google
    */
-  Google = 'google',
+  google = 'google',
   /**
    * Microsoft
    */
-  Microsoft = 'microsoft'
+  microsoft = 'microsoft'
 }

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DocumentViewComponent } from './document-view/document-view.component';
+import { DocumentViewDirective } from './document-view.directive';
 import { SafePipeModule } from 'safe-pipe';
 
 @NgModule({
   imports: [CommonModule, SafePipeModule],
-  declarations: [DocumentViewComponent],
-  exports: [DocumentViewComponent]
+  declarations: [DocumentViewDirective],
+  exports: [DocumentViewDirective]
 })
 export class DocumentViewModule {}
