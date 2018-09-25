@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { ViewProviders } from './models/ViewProviders';
 import { UriBuilder } from 'uribuilder';
-import { cleanPath } from 'cleanPath';
+import { cleanPath } from 'cleanpath';
 import { Observable } from 'rxjs/Observable';
 import { TimerObservable } from 'rxjs/observable/TimerObservable';
 import 'rxjs/operator/toPromise';
